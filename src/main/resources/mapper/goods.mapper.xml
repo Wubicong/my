@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qianfeng.fxmall.goods.mapper.GoodsMapper">
-    <resultMap id="baseResultMap" type="com.qianfeng.fxmall.goods.bean.WxbGood">
+   <!-- <resultMap id="baseResultMap" type="com.qianfeng.fxmall.goods.bean.WxbGood">
         <id property="goodId" column="good_id"/>
         <result property="goodName" column="good_name"/>
         <result property="customerId" column="customer_id"/>
@@ -35,15 +35,32 @@
         <result property="isfdfk" column="isfdfk"/>
         <result property="leixingId" column="leixing_id"/>
         <result property="kfqq" column="kfqq"/>
-    </resultMap>
+    </resultMap>-->
 
     <!--sql标签用来定义Sql语句-->
     <sql id="params">
-        good_id,good_name,customer_id,good_pic,good_pic1,good_pic2,promote_desc,sku_title,sku_cost,
-     sku_price,sku_pmoney,copy_ids,copy_desc,forward_link,order_no,type_id,tags,state,create_time,
-     toped,recomed,toped_time,recomed_time,spc_id,zon_id,sell_num,website,iswxpay,isfdfk,leixing_id,kfqq
+        good_id,good_name,customer_id,good_pic,good_pic1,good_pic2,promote_desc,sku_title,sku_cost,sku_price,sku_pmoney,copy_ids,copy_desc,forward_link,order_no,type_id,tags,state,create_time,toped,recomed,toped_time,recomed_time,spc_id,zon_id,sell_num,website,iswxpay,isfdfk,leixing_id,kfqq
     </sql>
-    <select id="queryGoodByPage" resultMap="baseResultMap">
+    <select id="queryGoodByPage" resultType="com.qianfeng.fxmall.goods.bean.WxbGood">
         select <include refid="params"/> from wxb_good limit #{index},#{size}
     </select>
+    <insert id="insertGood">
+        insert into wxb_good (<include refid="params"/>)
+        values (#{good.goodId}, #{good.goodName}, #{good.customerId}, #{good.goodPic}, #{good.goodPic1}, #{good.goodPic2},#{good.promoteDesc},
+        #{good.skuTitle}, #{good.skuCost}, #{good.skuPrice}, #{good.skuPmoney},
+        #{good.copyIds}, #{good.copyDesc}, #{good.forwardLink}, #{good.orderNo}, #{good.typeId}, #{good.tags},
+        #{good.state}, #{good.createTime}, #{good.toped}, #{good.recomed},#{good.topedTime},
+        #{good.recomedTime}, #{good.spcId}, #{good.zonId}, #{good.sellNum}, #{good.website},
+        #{good.iswxpay}, #{good.isfdfk}, #{good.leixingId}, #{good.kfqq});
+    </insert>
+    <update id="updateGood">
+        update wxb_good set good_name=#{good.goodName},customer_id=#{good.customerId},good_pic=#{good.goodPic},
+        good_pic1=#{good.goodPic1},good_pic2=#{good.goodPic2},promote_desc=#{good.promoteDesc},sku_title=#{good.skuTitle},sku_cost=#{good.skuCost},
+     sku_price=#{good.skuPrice},sku_pmoney=#{good.skuPmoney},copy_ids=#{good.copyIds},copy_desc=#{good.copyDesc},forward_link=#{good.forwardLink},
+     order_no=#{good.orderNo},type_id=#{good.typeId},tags=#{good.tags},state=#{good.state},create_time=#{good.createTime},
+     toped=#{good.toped},recomed= #{good.recomed},toped_time=#{good.topedTime},recomed_time=#{good.recomedTime},spc_id=#{good.spcId},zon_id=#{good.zonId},
+     sell_num=#{good.sellNum},website=#{good.website},iswxpay=#{good.iswxpay},isfdfk=#{good.isfdfk},leixing_id=#{good.leixingId},kfqq=#{good.kfqq} where good_id=#{good.goodId};
+    </update>
+
+
 </mapper>

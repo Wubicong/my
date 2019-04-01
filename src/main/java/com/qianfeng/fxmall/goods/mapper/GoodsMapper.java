@@ -6,5 +6,6 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface GoodsMapper {
-    List<WxbGood> queryGoodByPage(@Param("index")Integer index, @Param("size") Integer size) ;
+    List<WxbGood> queryGoodByPage(@Param("index")Integer index, @Param("size") Integer size);
+    void insertGood(@Param("good")WxbGood good);
 }

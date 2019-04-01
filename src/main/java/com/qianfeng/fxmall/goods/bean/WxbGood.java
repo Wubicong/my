@@ -2,6 +2,7 @@ package com.qianfeng.fxmall.goods.bean;
 
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 public class WxbGood implements Serializable {
 
@@ -37,7 +38,6 @@ public class WxbGood implements Serializable {
   private long leixingId;
   private String kfqq;
 
-
   public String getGoodId() {
     return goodId;
   }
@@ -45,7 +45,6 @@ public class WxbGood implements Serializable {
   public void setGoodId(String goodId) {
     this.goodId = goodId;
   }
-
 
   public String getGoodName() {
     return goodName;
@@ -55,7 +54,6 @@ public class WxbGood implements Serializable {
     this.goodName = goodName;
   }
 
-
   public String getCustomerId() {
     return customerId;
   }
@@ -63,7 +61,6 @@ public class WxbGood implements Serializable {
   public void setCustomerId(String customerId) {
     this.customerId = customerId;
   }
-
 
   public String getGoodPic() {
     return goodPic;
@@ -73,7 +70,6 @@ public class WxbGood implements Serializable {
     this.goodPic = goodPic;
   }
 
-
   public String getGoodPic1() {
     return goodPic1;
   }
@@ -81,7 +77,6 @@ public class WxbGood implements Serializable {
   public void setGoodPic1(String goodPic1) {
     this.goodPic1 = goodPic1;
   }
-
 
   public String getGoodPic2() {
     return goodPic2;
@@ -91,7 +86,6 @@ public class WxbGood implements Serializable {
     this.goodPic2 = goodPic2;
   }
 
-
   public String getPromoteDesc() {
     return promoteDesc;
   }
@@ -99,7 +93,6 @@ public class WxbGood implements Serializable {
   public void setPromoteDesc(String promoteDesc) {
     this.promoteDesc = promoteDesc;
   }
-
 
   public String getSkuTitle() {
     return skuTitle;
@@ -109,7 +102,6 @@ public class WxbGood implements Serializable {
     this.skuTitle = skuTitle;
   }
 
-
   public String getSkuCost() {
     return skuCost;
   }
@@ -117,7 +109,6 @@ public class WxbGood implements Serializable {
   public void setSkuCost(String skuCost) {
     this.skuCost = skuCost;
   }
-
 
   public String getSkuPrice() {
     return skuPrice;
@@ -127,7 +118,6 @@ public class WxbGood implements Serializable {
     this.skuPrice = skuPrice;
   }
 
-
   public String getSkuPmoney() {
     return skuPmoney;
   }
@@ -135,7 +125,6 @@ public class WxbGood implements Serializable {
   public void setSkuPmoney(String skuPmoney) {
     this.skuPmoney = skuPmoney;
   }
-
 
   public String getCopyIds() {
     return copyIds;
@@ -145,7 +134,6 @@ public class WxbGood implements Serializable {
     this.copyIds = copyIds;
   }
 
-
   public String getCopyDesc() {
     return copyDesc;
   }
@@ -153,7 +141,6 @@ public class WxbGood implements Serializable {
   public void setCopyDesc(String copyDesc) {
     this.copyDesc = copyDesc;
   }
-
 
   public String getForwardLink() {
     return forwardLink;
@@ -163,7 +150,6 @@ public class WxbGood implements Serializable {
     this.forwardLink = forwardLink;
   }
 
-
   public long getOrderNo() {
     return orderNo;
   }
@@ -171,7 +157,6 @@ public class WxbGood implements Serializable {
   public void setOrderNo(long orderNo) {
     this.orderNo = orderNo;
   }
-
 
   public String getTypeId() {
     return typeId;
@@ -181,7 +166,6 @@ public class WxbGood implements Serializable {
     this.typeId = typeId;
   }
 
-
   public String getTags() {
     return tags;
   }
@@ -189,7 +173,6 @@ public class WxbGood implements Serializable {
   public void setTags(String tags) {
     this.tags = tags;
   }
-
 
   public long getState() {
     return state;
@@ -199,15 +182,13 @@ public class WxbGood implements Serializable {
     this.state = state;
   }
 
-
-  public java.sql.Timestamp getCreateTime() {
+  public Timestamp getCreateTime() {
     return createTime;
   }
 
-  public void setCreateTime(java.sql.Timestamp createTime) {
+  public void setCreateTime(Timestamp createTime) {
     this.createTime = createTime;
   }
-
 
   public long getToped() {
     return toped;
@@ -217,7 +198,6 @@ public class WxbGood implements Serializable {
     this.toped = toped;
   }
 
-
   public long getRecomed() {
     return recomed;
   }
@@ -226,24 +206,21 @@ public class WxbGood implements Serializable {
     this.recomed = recomed;
   }
 
-
-  public java.sql.Timestamp getTopedTime() {
+  public Timestamp getTopedTime() {
     return topedTime;
   }
 
-  public void setTopedTime(java.sql.Timestamp topedTime) {
+  public void setTopedTime(Timestamp topedTime) {
     this.topedTime = topedTime;
   }
 
-
-  public java.sql.Timestamp getRecomedTime() {
+  public Timestamp getRecomedTime() {
     return recomedTime;
   }
 
-  public void setRecomedTime(java.sql.Timestamp recomedTime) {
+  public void setRecomedTime(Timestamp recomedTime) {
     this.recomedTime = recomedTime;
   }
-
 
   public String getSpcId() {
     return spcId;
@@ -253,7 +230,6 @@ public class WxbGood implements Serializable {
     this.spcId = spcId;
   }
 
-
   public String getZonId() {
     return zonId;
   }
@@ -261,7 +237,6 @@ public class WxbGood implements Serializable {
   public void setZonId(String zonId) {
     this.zonId = zonId;
   }
-
 
   public long getSellNum() {
     return sellNum;
@@ -271,7 +246,6 @@ public class WxbGood implements Serializable {
     this.sellNum = sellNum;
   }
 
-
   public String getWebsite() {
     return website;
   }
@@ -279,7 +253,6 @@ public class WxbGood implements Serializable {
   public void setWebsite(String website) {
     this.website = website;
   }
-
 
   public long getIswxpay() {
     return iswxpay;
@@ -289,7 +262,6 @@ public class WxbGood implements Serializable {
     this.iswxpay = iswxpay;
   }
 
-
   public long getIsfdfk() {
     return isfdfk;
   }
@@ -297,7 +269,6 @@ public class WxbGood implements Serializable {
   public void setIsfdfk(long isfdfk) {
     this.isfdfk = isfdfk;
   }
-
 
   public long getLeixingId() {
     return leixingId;
@@ -307,7 +278,6 @@ public class WxbGood implements Serializable {
     this.leixingId = leixingId;
   }
 
-
   public String getKfqq() {
     return kfqq;
   }
@@ -316,4 +286,40 @@ public class WxbGood implements Serializable {
     this.kfqq = kfqq;
   }
 
+  public WxbGood(String goodId, String goodName, String customerId, String goodPic, String goodPic1, String goodPic2, String promoteDesc, String skuTitle, String skuCost, String skuPrice, String skuPmoney, String copyIds, String copyDesc, String forwardLink, long orderNo, String typeId, String tags, long state, Timestamp createTime, long toped, long recomed, Timestamp topedTime, Timestamp recomedTime, String spcId, String zonId, long sellNum, String website, long iswxpay, long isfdfk, long leixingId, String kfqq) {
+    this.goodId = goodId;
+    this.goodName = goodName;
+    this.customerId = customerId;
+    this.goodPic = goodPic;
+    this.goodPic1 = goodPic1;
+    this.goodPic2 = goodPic2;
+    this.promoteDesc = promoteDesc;
+    this.skuTitle = skuTitle;
+    this.skuCost = skuCost;
+    this.skuPrice = skuPrice;
+    this.skuPmoney = skuPmoney;
+    this.copyIds = copyIds;
+    this.copyDesc = copyDesc;
+    this.forwardLink = forwardLink;
+    this.orderNo = orderNo;
+    this.typeId = typeId;
+    this.tags = tags;
+    this.state = state;
+    this.createTime = createTime;
+    this.toped = toped;
+    this.recomed = recomed;
+    this.topedTime = topedTime;
+    this.recomedTime = recomedTime;
+    this.spcId = spcId;
+    this.zonId = zonId;
+    this.sellNum = sellNum;
+    this.website = website;
+    this.iswxpay = iswxpay;
+    this.isfdfk = isfdfk;
+    this.leixingId = leixingId;
+    this.kfqq = kfqq;
+  }
+
+  public WxbGood() {
+  }
 }

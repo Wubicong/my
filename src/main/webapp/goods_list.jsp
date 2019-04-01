@@ -554,8 +554,8 @@
                                             <div class="dataTables_paginate paging_bootstrap sender">
                                                 <ul class="pagination">
 
-                                                    <li><a href="goods.do?page=1" class="active">1</a></li>
-                                                    <li><a href="goods.do?page=2">2</a></li>
+                                                    <li><a href="good.do?m=selectGood&page=1" class="active">1</a></li>
+                                                    <li><a href="good.do?m=selectGood&page=2">2</a></li>
 
 
                                                 </ul>

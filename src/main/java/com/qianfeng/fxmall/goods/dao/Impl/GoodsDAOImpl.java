@@ -14,13 +14,19 @@ import java.io.InputStream;
 import java.util.List;
 
 public class GoodsDAOImpl implements IGoodsDAO {
-
+    SqlSession session = MyBatisSessionFactroyUtils.getSession();
+    GoodsMapper goodsMapper = session.getMapper(GoodsMapper.class);
 
     @Override
-    public List<WxbGood> queryGoodsByPage(Integer page) throws Exception {
-        SqlSession session = MyBatisSessionFactroyUtils.getSession();
-        GoodsMapper goodsMapper = session.getMapper(GoodsMapper.class);
+    public List<WxbGood> queryGoodsByPage(Integer page)  {
+
         List<WxbGood> goods = goodsMapper.queryGoodByPage(page, Constants.page.PAGE_SIZE);
         return goods;
+    }
+
+    @Override
+    public void insertGood(WxbGood good) {
+        goodsMapper.insertGood(good);
+        session.commit();
     }
 }

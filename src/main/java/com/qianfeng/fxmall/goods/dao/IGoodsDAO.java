@@ -6,6 +6,6 @@ import java.io.IOException;
 import java.util.List;
 
 public interface IGoodsDAO {
-    List<WxbGood> queryGoodsByPage(Integer page) throws Exception;
-
+    List<WxbGood> queryGoodsByPage(Integer page);
+    void insertGood(WxbGood good);
 }
